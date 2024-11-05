@@ -24,3 +24,4 @@ Route::get('/office-list',[OfficeController::class,'officeList']);
 Route::post('/create-feeder',[FeederController::class,'createFeeder']);
 Route::get('/get-feeder',[FeederController::class,'feederList']);
 Route::get('/all-feeder',[FeederController::class,'allFeeder']);
+Route::post('/update-feeder',[FeederController::class,'updateFeeder']);

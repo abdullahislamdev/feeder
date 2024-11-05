@@ -33,6 +33,19 @@ class FeederController extends Controller
         return view('pages.feeder-list-page');
     }
 
+    //feeder info update
+
+    public function  updateFeeder(Request $request){
+        $feederId = $request->input('id');
+        return Feeder::where('id','=',$feederId)->update([
+            'name'=>$request->input('name'),
+            'incharge_mobile'=>$request->input('incharge_mobile'),
+            'area'=>$request->input('area'),
+            'office_id'=>$request->input('office_id')
+        ]);
+    }
+
+
 
 
 }

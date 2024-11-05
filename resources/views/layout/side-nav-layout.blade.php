@@ -79,7 +79,7 @@
         <span class="side-bar-item-caption">All Feeder</span>
     </a>
     <a href="{{url("/office-page")}}" class="side-bar-item">
-        <i class="bi bi-people"></i>
+        <i class="bi bi-building"></i>
         <span class="side-bar-item-caption">Office</span>
     </a>
 

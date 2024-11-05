@@ -6,6 +6,9 @@
                 <div class="align-items-center col">
                     <h4>All Feeders</h4>
                 </div>
+                <div class="align-items-center col">
+                    <button data-bs-toggle="modal" data-bs-target="#create-modal" class="float-end btn m-0 bg-gradient-primary">Create</button>
+                </div>
             </div>
             <hr class="bg-secondary"/>
             <div class="table-responsive">
@@ -22,6 +25,7 @@
                     <th>Feeder Incharge Mobile</th>
                     <th>Area</th>
                     <th>Office Address</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody id="tableList">
@@ -37,7 +41,7 @@
 <script>
     getList();
     async function getList(){
-        // showLoader();
+        showLoader();
         let res = await axios.get('/get-feeder');
         hideLoader();
 
@@ -62,6 +66,8 @@
                     <td>${incharge_mobile}</td> 
                     <td>${area}</td> 
                     <td>${feeder.office['address']}</td>
+                    <td>
+                        <button data-id="${id}" class="btn editBtn btn-sm-button btn-outline-success" >Edit</button>
                 </tr>
             `
             tableList.append(row);

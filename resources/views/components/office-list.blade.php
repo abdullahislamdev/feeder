@@ -38,7 +38,7 @@
 <script>
     getList();
     async function getList(){
-        // showLoader();
+        showLoader();
         let res = await axios.get('/office-list');
         hideLoader();
 
