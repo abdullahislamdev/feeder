@@ -2,4 +2,5 @@
 @section('content')
     @include('components.feeder-list')
     @include('components.create-feeder')
+    @include('components.create-feeder')
 @endsection
